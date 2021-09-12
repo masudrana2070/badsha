@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box !important;
+    font-family: sans-serif;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+  }
+
+.row::after {
+    content: ' ';
+    clear: both;
+    display: block;
+}
+
+/* .main-container {
+    max-width: 1200px;
+    height: 1920px;
+    margin: auto;
+    border: .5px solid black;
+} */
+
+.container {
+    max-width: 1080px;
+    height: auto;
+    margin: auto;
+}
+
+
+/* Header_Section_Start */
+.header {
+    display: flex;
+    flex-direction: row;
+    background: url(../images/bg-header.png);
+}
+
+.header .header-left .time-box{
+    padding: 48px 0 48px 110px;
+}
+
+.header .header-left .time-box .analog-clock {
+    width: 94px;
+    height: 94px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: relative;
+}
+
+.header .header-left .time-box .analog-clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+
+}
+
+.header .header-left .time-box .analog-clock .number1 {--rotation: 30deg; }
+.header .header-left .time-box .analog-clock .number2 {--rotation: 60deg; }
+.header .header-left .time-box .analog-clock .number3 {--rotation: 90deg; }
+.header .header-left .time-box .analog-clock .number4 {--rotation: 120deg; }
+.header .header-left .time-box .analog-clock .number5 {--rotation: 150deg; }
+.header .header-left .time-box .analog-clock .number6 {--rotation: 180deg; }
+.header .header-left .time-box .analog-clock .number7 {--rotation: 210deg; }
+.header .header-left .time-box .analog-clock .number8 {--rotation: 240deg; }
+.header .header-left .time-box .analog-clock .number9 {--rotation: 270deg; }
+.header .header-left .time-box .analog-clock .number10 {--rotation: 300deg; }
+.header .header-left .time-box .analog-clock .number11 {--rotation: 330deg; }
+
+.header .header-left .time-box .analog-clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    /* width: 10px;
+    height: 50%; */
+    /* background-color: black; */
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.header .header-left .time-box .analog-clock::after {
+    content: ' ';
+    position: absolute;
+    background-color: #fff;
+    z-index: 11;
+    width: 7px;
+    height: 7px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+}
+
+.header .header-left .time-box .analog-clock .hand.second {
+    width: 5px;
+    height: 45%;
+    background-color: red;
+    display: none;
+}
+
+.header .header-left .time-box .analog-clock .hand.minute {
+    width: 3px;
+    height: 40%;
+    background-color: #fff;
+}
+.header .header-left .time-box .analog-clock .hand.hour {
+    width: 5px;
+    height: 35%;
+    background-color: #fff;
+}
+
+
+.header .header-left .time-box .digital-clock{
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+.header .header-left .time-box .digital-clock h1{
+    margin: 0;
+    font-size: 45px;
+    font-weight: normal;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.header .header-left .time-box .digital-clock h3{
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+    font-family: sans-serif;
+    padding-left: 10px;
+}
+
+
+.header .header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .header-right .logo {
+    height: 100%;
+    width: 100%;
+    padding: 65px 75px;
+}
+
+/* Header_Section_End */
+
+/* Content_Section_Start */
+.content-container {
+    width: 800px;
+    height: auto;
+    margin: 103px 0;
+}
+
+.content-container .content-box {
+    margin-bottom: 12px;
+}
+
+.content-container .content-box:nth-of-type(1) {
+    margin-bottom: 7px;
+}
+
+.content-box .left-content {
+    background-color: #fff;
+    border-radius: 10px 0 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.content-box .left-content h3 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 21px;
+    padding: 35.5px 60px;
+}
+
+.content-box .right-content {
+    background-color: #fff;
+    opacity: .7;
+    border-radius: 0 10px 10px 0;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    position: relative;
+}
+
+.content-box .right-content h3 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: bold;
+    font-weight: 700;
+    padding: 35.5px 60px;
+    }
+
+.red-border {
+    position: absolute;
+    height: 100%;
+    width: 12px;
+    background-color: red;
+    border: .2px solid black;
+}
+.time-schedule {
+    width: 100%;
+    height: 94px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 35px;
+    align-items: center;
+    line-height: 22px;
+}
+
+.time{
+    margin-right: 10px;
+}
+.mainClock{
+    display: flex;
+}
+.time-box .time h5 {
+    margin: 0;
+    color: white;
+}
+
+.time-box .company h5 {
+    margin: 0;
+    color: #fff;
+}
+
+/* Content_Section_End */
+
+/* Footer_Section_Start */
+.footer {
+    background-image: url(../images/footer-2.png);
+    margin-top: -15px;
+}
+
+.footer h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 32px;
+    padding: 50px 0;
+    color: #fff;
+}
+
+/* Footer_Section_End */
+
