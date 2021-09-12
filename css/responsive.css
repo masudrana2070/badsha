@@ -6,3 +6,29 @@
         height: 120px;
     }
  }
+ @media (min-width: 210px) and (max-width:410px){
+    .red-border{
+        width: 5px;
+    }
+    .time{
+        margin-right:6px;
+    }
+    .time-schedule{
+        padding-left: 6px;
+        width: 100%;
+        height: 94px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        line-height: 22px;
+    }
+    .time-schedule{
+        height: 120px;
+    }
+    .content-box .left-content{
+        height: 120px;
+    }
+    .content-box .left-content h3{
+        padding: 35.5px 4px;
+    }
+ }
