@@ -226,13 +226,13 @@ body {
     padding: 35.5px 60px;
     }
 
-.red-border {
+/* .red-border {
     position: absolute;
     height: 100%;
     width: 12px;
     background-color: red;
     border: .2px solid black;
-}
+} */
 .time-schedule {
     width: 100%;
     height: 94px;
